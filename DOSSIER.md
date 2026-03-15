@@ -2,7 +2,7 @@
 
 **Dossier Version:** v1.1.1  
 **Protocol Compatibility:** Section 11 v11.6+  
-**Date:** [YYYY-MM-DD]  
+**Date:** [2026-03-15]  
 **Primary Source Systems:** Intervals.icu | [Other platforms]
 
 This document serves as a reference template for endurance athletes using the deterministic AI-coaching framework defined in Section 11.
@@ -26,14 +26,14 @@ This document serves as a reference template for endurance athletes using the de
 
 | Field | Value |
 |-------|-------|
-| Name | [Your name or alias] |
-| Age | [Age] |
-| Height | [cm] |
-| Current Weight | [kg] |
-| Target Weight | [kg] |
-| Location | [City, Country] |
+| Name | Hulkeler |
+| Age | [40] |
+| Height | [188] |
+| Current Weight | [80] |
+| Target Weight | [78] |
+| Location | [Zurich, Switzerland] |
 
-**Weigh-in Protocol:** [e.g., Once weekly, Friday morning, after bathroom, before food/drink]
+**Weigh-in Protocol:** [Once weekly, after bathroom]
 
 ### Medications & Supplements (Optional)
 
@@ -46,19 +46,19 @@ This document serves as a reference template for endurance athletes using the de
 
 | Type | Description |
 |------|-------------|
-| Primary | [e.g., Cycling performance (Endurance)] |
-| Secondary | [e.g., Running, SkiErg, Walking] |
+| Primary | [Cycling performance (Endurance)] |
+| Secondary | [Strength, Golf] |
 
 ### Goals
 
 | Goal | Target Date |
 |------|-------------|
-| [Primary goal] | [Year] |
-| [Secondary goal] | [Year] |
-| [Tertiary goal] | [Year] |
+| [Primary goal] | [2026 |
+| [Secondary goal] | [2028] |
+| [Tertiary goal] | [2030] |
 
-**Current Phase:** [e.g., Aerobic build + threshold development]  
-**Training Style:** [e.g., High-volume polarized (~15h/week)]
+**Current Phase:** [Aerobic build + threshold development]  
+**Training Style:** [polarized (~5-6h/week)]
 
 ---
 
@@ -68,20 +68,20 @@ This document serves as a reference template for endurance athletes using the de
 
 | Component | Details |
 |-----------|---------|
-| Trainer/Bike | [Model] |
-| Platform | [e.g., Zwift, TrainerRoad, Tacx App] |
-| Cooling | [Fans, AC, etc.] |
+| Trainer/Bike | [Wahoo Kickr] |
+| Platform | [Zwift] |
+| Cooling | [Wahoo Headwind] |
 | Sensors | [HRM, power meter, cadence] |
-| Pedals | [Model] |
+| Pedals | [Assioma Favero] |
 
 ### Outdoor Setup
 
 | Component | Details |
 |-----------|---------|
-| Bike | [Model, size] |
-| Power Meter | [Model] |
-| Head Unit | [Model] |
-| HRM | [Model] |
+| Bike | [Specialized Tarmac, size] |
+| Power Meter | [Assioma Favero Pro] |
+| Head Unit | [Garmin 1050] |
+| HRM | [Polar H10] |
 
 ### Other Modalities
 
