@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-25T09:46:58.894506",
+    "last_updated": "2026-06-25T12:06:29.742267",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -38,6 +38,15 @@
       "context": "TID shift: 7d Polarized vs 28d Pyramidal. Training distribution changing.",
       "persistence_days": null,
       "tier": 3
+    },
+    {
+      "metric": "race_week",
+      "value": 3,
+      "severity": "info",
+      "threshold": "RACE_A within 7 days",
+      "context": "Race week D-3 of 'Tri Hard 40km TT'. Today: Easy / rest, 0-14 TSS. Z1-Z2 only",
+      "persistence_days": null,
+      "tier": 1
     }
   ],
   "readiness_decision": {
@@ -81,12 +90,12 @@
       "unavailable": 0
     },
     "phase_context": {
-      "phase": "Build",
-      "phase_week": 1,
-      "amber_threshold": 3,
-      "modifier_applied": "build_loosened"
+      "phase": "Taper",
+      "phase_week": 0,
+      "amber_threshold": 1,
+      "modifier_applied": "race_week_tightened"
     },
-    "race_week_defers": false,
+    "race_week_defers": true,
     "modification": {
       "triggers": [
         "rhr",
@@ -99,7 +108,7 @@
         "cap_zone": "Z2"
       }
     },
-    "reason": "P2 signal count. 3 amber (rhr, sleep, acwr) >= threshold 3.",
+    "reason": "P2 signal count. 3 amber (rhr, sleep, acwr) >= threshold 1.",
     "alarm_refs": []
   },
   "history": {
@@ -303,10 +312,10 @@
       "note": "No planned workouts in period"
     },
     "phase_detection": {
-      "phase": "Build",
+      "phase": "Taper",
       "confidence": "medium",
       "reason_codes": [
-        "NO_PLANNED_WORKOUTS"
+        "RACE_IMMINENT"
       ],
       "basis": {
         "stream_1": {
@@ -317,23 +326,23 @@
         },
         "stream_2": {
           "planned_tss_delta": null,
-          "hard_sessions_planned": 0,
-          "race_proximity": null,
+          "hard_sessions_planned": 1,
+          "race_proximity": 3,
           "next_week_load": null,
-          "plan_coverage_current_week": 0.0,
+          "plan_coverage_current_week": 0.2,
           "plan_coverage_next_week": 0.0
         },
         "data_quality": "good",
         "stream_agreement": null
       },
       "previous_phase": "Build",
-      "phase_duration_weeks": 1,
+      "phase_duration_weeks": 0,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Build",
+    "phase_detected": "Taper",
     "phase_triggers": [
-      "NO_PLANNED_WORKOUTS"
+      "RACE_IMMINENT"
     ],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
@@ -356,7 +365,7 @@
     "p_max": 861,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-25T09:46:58.893634",
+    "calculation_timestamp": "2026-06-25T12:06:29.741431",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -591,7 +600,19 @@
       "vo2max": null
     }
   ],
-  "planned_workouts": [],
+  "planned_workouts": [
+    {
+      "id": 118520599,
+      "date": "2026-06-28",
+      "name": "Tri Hard 40km TT",
+      "type": "RACE_A",
+      "planned_tss": null,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
+      "workout_summary": null,
+      "description": ""
+    }
+  ],
   "workout_summary_stats": {
     "attempted": 0,
     "success": 0,
@@ -609,13 +630,80 @@
     "avg_resting_hr": 47.3
   },
   "race_calendar": {
-    "next_race": null,
-    "all_races": [],
+    "next_race": {
+      "name": "Tri Hard 40km TT",
+      "date": "2026-06-28",
+      "category": "RACE_A",
+      "type": "Ride",
+      "days_until": 3,
+      "moving_time_seconds": 4500,
+      "distance_meters": 40000.0
+    },
+    "all_races": [
+      {
+        "name": "Tri Hard 40km TT",
+        "date": "2026-06-28",
+        "category": "RACE_A",
+        "type": "Ride",
+        "days_until": 3,
+        "moving_time_seconds": 4500,
+        "distance_meters": 40000.0
+      }
+    ],
     "taper_alert": {
       "active": false
     },
     "race_week": {
-      "active": false
+      "active": true,
+      "event_name": "Tri Hard 40km TT",
+      "event_date": "2026-06-28",
+      "event_category": "RACE_A",
+      "event_type": "Ride",
+      "event_duration_class": "short_intense",
+      "event_moving_time_seconds": 4500,
+      "days_until_event": 3,
+      "current_day": "D-3",
+      "ctl_baseline": 35.0,
+      "normal_weekly_tss": 244.9,
+      "race_week_tss_budget": {
+        "min": 98,
+        "max": 135
+      },
+      "race_week_tss_spent": 184,
+      "race_week_tss_remaining": {
+        "min": 0,
+        "max": 0
+      },
+      "projected_race_day_tsb": 11.7,
+      "tsb_target_range": {
+        "min": 5,
+        "max": 15
+      },
+      "today": {
+        "label": "Easy / rest",
+        "load_target_tss": {
+          "min": 0,
+          "max": 14
+        },
+        "zones": "Z1-Z2 only",
+        "purpose": "Taper tantrums expected (D-4 to D-2). Normal \u2014 not lost fitness."
+      },
+      "carb_loading": {
+        "applicable": false,
+        "active": false,
+        "starts": "D-4",
+        "start_date": "2026-06-24",
+        "note": null
+      },
+      "opener": {
+        "day": "D-2",
+        "date": "2026-06-26",
+        "intensity": "more_intense"
+      },
+      "go_no_go": {
+        "tsb_status": "green",
+        "notes": []
+      }
     }
   }
 }
