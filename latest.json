@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-08-19T03:59:58.514435",
+    "last_updated": "2026-08-19T04:46:46.367663",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -41,14 +41,14 @@
     }
   ],
   "readiness_decision": {
-    "recommendation": "go",
-    "priority": 3,
+    "recommendation": "modify",
+    "priority": 2,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 67.2,
-        "delta_pct": null
+        "status": "green",
+        "value": 68.0,
+        "baseline_7d": 67.3,
+        "delta_pct": 1.0
       },
       "rhr": {
         "status": "green",
@@ -57,17 +57,17 @@
         "delta_bpm": -0.4
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "amber",
+        "hours": 6.91,
+        "quality": 3
       },
       "acwr": {
         "status": "amber",
         "value": 0.6
       },
       "ri": {
-        "status": "unavailable",
-        "value": null
+        "status": "green",
+        "value": 1.02
       },
       "tsb": {
         "status": "green",
@@ -75,10 +75,10 @@
       }
     },
     "signal_summary": {
-      "green": 2,
-      "amber": 1,
+      "green": 4,
+      "amber": 2,
       "red": 0,
-      "unavailable": 3
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Base",
@@ -87,8 +87,18 @@
       "modifier_applied": "default"
     },
     "race_week_defers": false,
-    "modification": null,
-    "reason": "P3 green light. 2 green, 1 amber (threshold 2), 0 red.",
+    "modification": {
+      "triggers": [
+        "sleep",
+        "acwr"
+      ],
+      "suggested_adjustments": {
+        "intensity": "reduce",
+        "volume": "reduce",
+        "cap_zone": "Z2"
+      }
+    },
+    "reason": "P2 signal count. 2 amber (sleep, acwr) >= threshold 2.",
     "alarm_refs": []
   },
   "history": {
@@ -156,19 +166,19 @@
     "current_metrics": {
       "weight_kg": 80.099,
       "resting_hr": 48,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null
+      "hrv": 68.0,
+      "sleep_quality": 3,
+      "sleep_hours": 6.91,
+      "sleep_formatted": "6h54m"
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "hrv_baseline_7d": 67.2,
+    "recovery_index": 1.02,
+    "hrv_baseline_7d": 67.3,
     "rhr_baseline_7d": 48.4,
-    "hrv_baseline_28d": 63.4,
+    "hrv_baseline_28d": 63.6,
     "rhr_baseline_28d": 48.8,
-    "latest_hrv": null,
+    "latest_hrv": 68.0,
     "latest_rhr": 48,
     "acwr": 0.6,
     "acwr_interpretation": "undertraining",
@@ -181,7 +191,7 @@
     "multi_sport_detected": false,
     "strain": 1.0,
     "stress_tolerance": 0.0,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 0.0,
     "tss_7d_total": 3.0,
     "tss_28d_total": 20.0,
     "zone_distribution_7d": {
@@ -339,9 +349,9 @@
     "p_max": 816,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-08-19T03:59:58.513641",
+    "calculation_timestamp": "2026-08-19T04:46:46.366832",
     "data_quality": {
-      "hrv_data_points": 5,
+      "hrv_data_points": 6,
       "rhr_data_points": 7,
       "activities_7d": 1,
       "activities_28d": 5,
@@ -499,12 +509,12 @@
       "date": "2026-08-19",
       "weight_kg": null,
       "resting_hr": 48,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 68.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 6.91,
+      "sleep_formatted": "6h54m",
+      "sleep_quality": 3,
+      "sleep_score": 76.0,
       "mental_energy": null,
       "fatigue": null,
       "soreness": null,
@@ -526,7 +536,7 @@
     "total_training_formatted": "6m",
     "total_tss": 3,
     "activities_count": 1,
-    "avg_hrv": 67.2,
+    "avg_hrv": 67.3,
     "avg_resting_hr": 48.4
   },
   "race_calendar": {
